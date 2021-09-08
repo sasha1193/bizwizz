@@ -1,0 +1,231 @@
+.header {
+  width: 100%;
+  height: 90vh;
+  background-color: var(--color-black);
+  background-image: url(header-img-2.jpg);
+  background-size: 64rem;
+  background-position: 90% 48%;
+  background-repeat: no-repeat;
+  position: relative;
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10rem;
+    @media (max-width: $breakpoint-490) {
+      justify-content: space-around;
+    }
+  }
+
+  &__logo {
+    height: 15rem;
+    width: auto;
+    margin-left: 5rem;
+    @media (max-width: $breakpoint-900) {
+      margin-left: 0;
+    }
+  }
+  &__main-nav {
+    display: flex;
+    list-style: none;
+    margin-top: 5rem;
+    margin-right: 10rem;
+    flex-wrap: wrap;
+    @media (max-width: $breakpoint-900) {
+      margin-right: 2rem;
+    }
+    @media (max-width: $breakpoint-490) {
+      display: flex;
+      flex-direction: column;
+      margin-right: 4rem;
+    }
+
+    & li {
+      margin-left: 4rem;
+
+      & a:link,
+      & a:visited {
+        text-decoration: none;
+        color: var(--color-white);
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 1rem;
+        transition: 0.2s;
+
+        @media (max-width: $breakpoint-900) {
+          border: none;
+        }
+      }
+      & a:hover,
+      & a:active {
+        color: var(--color-primary);
+        border-bottom: 2px solid var(--color-primary);
+        font-weight: 500;
+        @media (max-width: $breakpoint-900) {
+          border: none;
+        }
+      }
+    }
+  }
+
+  &__box {
+    position: absolute;
+    top: 20rem;
+    left: 20rem;
+    text-align: left;
+
+    @media (max-width: $breakpoint-900) {
+      left: 10rem;
+    }
+    @media (max-width: $breakpoint-490) {
+      left: 10rem;
+    }
+  }
+  &__text-box h1 {
+    font-size: 6rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: 4rem;
+  }
+  &__text-box h2 {
+    font-size: 5rem;
+    color: var(--color-white);
+    width: 50%;
+    margin-bottom: 5rem;
+    @media (max-width: $breakpoint-490) {
+      font-size: 4rem;
+    }
+  }
+}
+
+//For all sections
+.section-header {
+  text-align: center;
+}
+.section-header h2 {
+  color: var(--color-primary);
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-bottom: 2.5rem;
+  @media (max-width: $breakpoint-490) {
+    font-size: 2rem;
+  }
+}
+
+.section-header h1 {
+  color: var(--color-darkgrey);
+  font-size: 4rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  padding-bottom: 5rem;
+  @media (max-width: $breakpoint-490) {
+    font-size: 3rem;
+  }
+}
+
+.section-services {
+  background-color: white;
+  padding-bottom: 20rem;
+  @media (max-width: $breakpoint-490) {
+    padding-bottom: 5rem;
+  }
+}
+
+.team-display {
+  margin-top: 30rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  @media (max-width: $breakpoint-900) {
+    margin-top: 10rem;
+  }
+  @media (max-width: $breakpoint-490) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.section-team {
+  margin-bottom: 30rem;
+  @media (max-width: $breakpoint-900) {
+    margin-bottom: 10rem;
+  }
+}
+.section-portfolio {
+  background-color: var(--color-white);
+}
+
+.section-contact {
+  background-color: var(--color-white);
+}
+
+.cta-section {
+  background-color: var(--color-darkgrey-2);
+  padding: 3rem;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  padding: 3rem 4rem;
+  align-items: baseline;
+  @media (max-width: $breakpoint-360) {
+    padding: 3rem;
+  }
+  @media (max-width: $breakpoint-900) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__nav {
+    & ul {
+      list-style: none;
+      display: flex;
+
+      & li {
+        margin-left: 1rem;
+
+        & a {
+          text-decoration: none;
+          color: var(--color-lightgrey);
+
+          &:link,
+          &:visited {
+            border-bottom: 1px solid transparent;
+            transition: ease-in 0.2s;
+            padding-bottom: 1rem;
+            @media (max-width: $breakpoint-360) {
+              border: none;
+            }
+          }
+
+          &:hover,
+          &:active {
+            border-bottom: 1px solid var(--color-lightgrey);
+            @media (max-width: $breakpoint-360) {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__author {
+    text-decoration: none;
+    color: var(--color-lightgrey);
+    @media (max-width: $breakpoint-360) {
+      display: block;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: $breakpoint-650) {
+      display: block;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
